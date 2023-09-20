@@ -31,6 +31,17 @@ public class Money : MonoBehaviour
         banlanceAmount += amount;
     }
 
+    public void Withdraw(int amount)
+    {
+        if (banlanceAmount < amount)
+        {
+            lackPanel.SetActive(true);
+            return;
+        }
+        banlanceAmount -= amount;
+        cashAmount += amount;
+    }
+
     private void LateUpdate()
     {
         cashAmountTxt.text = cashAmount.ToString();
