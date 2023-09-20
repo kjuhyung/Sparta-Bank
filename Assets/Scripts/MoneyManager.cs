@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Money : MonoBehaviour
+public class MoneyManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI cashAmountTxt;
     [SerializeField] private TextMeshProUGUI banlanceAmountTxt;
 
-    [SerializeField] private GameObject lackPanel;
+    [SerializeField] public GameObject lackPanel;
 
-    [SerializeField] private TMP_InputField depositInput;
-
-    int cashAmount; 
-    int banlanceAmount; 
+    public int cashAmount; 
+    public int banlanceAmount; 
 
 
     private void Awake()
