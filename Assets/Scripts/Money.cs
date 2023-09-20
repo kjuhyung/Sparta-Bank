@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI cashAmountTxt;
     [SerializeField] private TextMeshProUGUI banlanceAmountTxt;
+    [SerializeField] private GameObject lackPanel;
 
     int cashAmount; 
     int banlanceAmount; 
@@ -22,8 +24,7 @@ public class Money : MonoBehaviour
     {     
         if(cashAmount < amount)
         {
-            // TODO
-            // ÀÜ¾× ºÎÁ· È­¸é ¶ç¿ì±â
+            lackPanel.SetActive(true);
             return;
         }
         cashAmount -= amount;
