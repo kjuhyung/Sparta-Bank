@@ -46,7 +46,7 @@ public class MoneyManager : MonoBehaviour
     private void LateUpdate()
     {
         // 0 일 때 Null 이 되버려서 출력이 안되는 문제
-        // cashAmountTxt.text = string.Format("{0:#,###}", cashAmount);        
+        // cashAmountTxt.text = string.Format("{0:#,###}", cashAmount);
         cashAmountTxt.text = cashAmount.ToString("N0");
         banlanceAmountTxt.text = banlanceAmount.ToString("N0");
     }
