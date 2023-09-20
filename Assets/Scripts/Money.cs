@@ -8,7 +8,10 @@ public class Money : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI cashAmountTxt;
     [SerializeField] private TextMeshProUGUI banlanceAmountTxt;
+
     [SerializeField] private GameObject lackPanel;
+
+    [SerializeField] private TMP_InputField depositInput;
 
     int cashAmount; 
     int banlanceAmount; 
