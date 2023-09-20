@@ -44,8 +44,8 @@ public class MoneyManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        cashAmountTxt.text = cashAmount.ToString();
-        banlanceAmountTxt.text = banlanceAmount.ToString();
+        cashAmountTxt.text = string.Format("{0:#,###}", cashAmount);
+        banlanceAmountTxt.text = string.Format("{0:#,###}", banlanceAmount);
     }
 }
 
