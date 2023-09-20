@@ -32,30 +32,12 @@ public class InputManager : MonoBehaviour
         {
             case FuncType.Deposit:
                 int depositAmount = int.Parse(depositInput.text);
-                if (moneyManager.cashAmount < depositAmount)
-                {
-                    moneyManager.lackPanel.SetActive(true);
-                    return;
-                }
-                else
-                {
-                    moneyManager.cashAmount -= depositAmount;
-                    moneyManager.banlanceAmount += depositAmount;
-                }
+                moneyManager.Deposit(depositAmount);
                 break;
 
             case FuncType.Withdraw:
                 int withdrawAmount = int.Parse(withdrawInput.text);
-                if (moneyManager.banlanceAmount < withdrawAmount)
-                {
-                    moneyManager.lackPanel.SetActive(true);
-                    return;
-                }
-                else
-                {
-                    moneyManager.cashAmount += withdrawAmount;
-                    moneyManager.banlanceAmount -= withdrawAmount;
-                }
+                moneyManager.Withdraw(withdrawAmount);
                 break;
         }
     }    
