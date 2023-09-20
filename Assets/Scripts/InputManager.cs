@@ -32,13 +32,27 @@ public class InputManager : MonoBehaviour
         {
             case FuncType.Deposit:
                 int depositAmount = int.Parse(depositInput.text);
+                if (depositAmount < 0)
+                {
+                    WrongInput();
+                    return;
+                }
                 moneyManager.Deposit(depositAmount);
                 break;
 
             case FuncType.Withdraw:
                 int withdrawAmount = int.Parse(withdrawInput.text);
+                if (withdrawAmount < 0)
+                {
+                    WrongInput();
+                    return;
+                }
                 moneyManager.Withdraw(withdrawAmount);
                 break;
         }
-    }    
+    }  
+    public void WrongInput()
+    {
+        moneyManager.wrongInputPanel.SetActive(true);
+    }
 }

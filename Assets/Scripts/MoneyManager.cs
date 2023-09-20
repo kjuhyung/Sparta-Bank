@@ -9,9 +9,10 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI banlanceAmountTxt;
 
     [SerializeField] public GameObject lackPanel;
+    [SerializeField] public GameObject wrongInputPanel;
 
-    public int cashAmount; 
-    public int banlanceAmount; 
+    private int cashAmount; 
+    private int banlanceAmount; 
 
 
     private void Awake()
