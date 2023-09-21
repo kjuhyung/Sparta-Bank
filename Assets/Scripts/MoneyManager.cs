@@ -8,7 +8,7 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cashAmountTxt;
     [SerializeField] private TextMeshProUGUI banlanceAmountTxt;
 
-    [SerializeField] public GameObject lackPanel;
+    [SerializeField] private GameObject lackPanel;
     [SerializeField] public GameObject wrongInputPanel;
 
     private int cashAmount; 

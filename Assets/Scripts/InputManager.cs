@@ -51,7 +51,7 @@ public class InputManager : MonoBehaviour
                 break;
         }
     }  
-    public void WrongInput()
+    private void WrongInput()
     {
         moneyManager.wrongInputPanel.SetActive(true);
     }
